@@ -1,0 +1,23 @@
+Criar um Origin Access Identity
+
+*Ao criar o s3 Bucket, podemos criar o Oringin Access Identity (API-key)  manualmente com o código abaixo, ou marcando a 
+opção oferecida pelo ClodFront, que gera esse código automáticamente.
+https://console.aws.amazon.com/cloudfront/v3/home?region=us-east-1#/oai
+
+
+
+{
+"Version": "2008-10-17",
+"Id": "PolicyForCloudFrontPrivateContent",
+"Statement": [
+{
+"Sid": "1",
+"Effect": "Allow",
+"Principal": {
+"AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity $CRIADO-PARA-PROJETO"
+},
+"Action": "s3:GetObject",
+"Resource": "arn:aws:s3:::$APLICATIVO/*"
+}
+]
+}
