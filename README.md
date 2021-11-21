@@ -47,3 +47,11 @@ Atualiza o Bucket existente as alterações da app
      sh "aws cloudfront get-distribution --id ${DIST-ID} >> ${PROJECT_NAME}-${ENV}.json"
      sh "aws cloudfront create-distribution --distribution-config file://${PROJECT_NAME}-${ENV}.json
 
+
+
+
+
+https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html
+https://docs.aws.amazon.com/cli/latest/reference/cloudfront/create-distribution.html
+https://docs.aws.amazon.com/pt_br/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html
+https://docs.aws.amazon.com/cli/latest/reference/s3api/create-bucket.html
